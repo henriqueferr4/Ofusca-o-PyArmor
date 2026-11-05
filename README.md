@@ -49,9 +49,11 @@ até o múltiplo de oito mais próximo. É esse argumento que gera as diferentes
   com média, mediana, desvio padrão, mínimo e máximo. O benchmark e as entradas são
   definidos nas listas `VERSIONS` e `INPUTS`, no início do arquivo.
 
-- `plot_results.py` — lê os resultados e gera dois gráficos: um de barras com o
-  tempo médio de cada versão e um de linha mostrando quantas vezes cada versão
-  ofuscada é mais lenta que a original.
+- `plot_results.py` — lê os resultados e reporta média, mediana, desvio padrão,
+  mínimo e máximo em gráfico (`grafico_estatisticas.png`) e em tabela
+  (`tabela_estatisticas.png` e `tabela_estatisticas.md`). Gera também um gráfico de
+  barras com o tempo médio de cada versão e um de linha mostrando quantas vezes cada
+  versão ofuscada é mais lenta que a original.
 
 - `calibrate.py` — foi escrito para o benchmark anterior (`benchmark.py`) e supõe
   que o tempo cresce de forma linear. Não serve para os scripts `t4-*`, cujas

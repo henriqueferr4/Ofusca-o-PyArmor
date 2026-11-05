@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Calibragem das entradas para o Trabalho IV.
+Defina as entradas para o Trabalho IV.
 
 Mede o tempo do benchmark NAO ofuscado em alguns pontos, estima a relacao
 tempo x entrada e sugere 3 entradas tais que:

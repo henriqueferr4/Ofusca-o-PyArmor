@@ -1,0 +1,10 @@
+venv/
+dist_A/
+dist_B/
+resultados/
+resultados_*.csv
+grafico_*.png
+tabela_estatisticas.*
+__pycache__/
+.pyarmor/
+pyarmor.bug.log
