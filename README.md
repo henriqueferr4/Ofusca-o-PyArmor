@@ -1,5 +1,23 @@
 # Trabalho IV — Ofuscação de código Python
 
+## Para quem clonar o repositório
+
+As versões ofuscadas (`dist_A` e `dist_B`) e os resultados não ficam no repositório.
+O `executar.sh` gera tudo isso sozinho, mas para com erro se não encontrar o ambiente
+virtual em `venv/`, que precisa ser criado antes:
+
+    git clone https://github.com/henriqueferr4/Ofusca-o-PyArmor.git
+    cd Ofusca-o-PyArmor
+    python3 -m venv venv
+    venv/bin/pip install pyarmor matplotlib
+    ./executar.sh --teste
+
+O `--teste` faz uma rodada rápida só para confirmar que tudo funciona. Para o
+experimento completo, que leva mais tempo, rodar `./executar.sh`. Os gráficos e as
+tabelas ficam em `resultados/`, numa pasta para cada benchmark e rodada.
+
+## Sobre o trabalho
+
 Este trabalho mede quanto custa, em tempo de execução, ofuscar um programa Python.
 A ideia de fundo é simples: muitas vezes um código roda num ambiente que não é
 confiável (a máquina do cliente, um servidor de terceiros) e a equipe que
