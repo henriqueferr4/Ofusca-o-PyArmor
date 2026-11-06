@@ -140,33 +140,6 @@ O experimento demora, porque são dois benchmarks, três versões, três entrada
 repetições de cada caso, ou seja, 180 execuções. Convém deixar a máquina só com isso
 rodando.
 
-## Cuidados com a medição
-
-Para os números fazerem sentido, a plataforma precisa estar controlada. Antes de
-rodar para valer: feche os outros programas, mantenha o laptop na tomada e, se
-possível, fixe a frequência da CPU em modo de desempenho, para que ela não fique
-variando sozinha durante os testes.
-
-Há dois tempos diferentes em jogo. O `time` impresso pelos benchmarks cobre só a
-parte principal do cálculo. Já o `run_experiment.py` cronometra o processo inteiro,
-incluindo a inicialização do Python e do PyArmor, a geração do corpus e a conferência
-do resultado, e é esse tempo que vai para os CSVs e os gráficos.
-
-O `t4-palavras.py` guarda o corpus inteiro na memória, cerca de 280 MB a cada cinco
-milhões de palavras, e a entrada precisa caber na RAM livre. Se a máquina começar a
-usar swap, a medição passa a refletir o disco, e não a ofuscação. Confira o consumo
-de memória ao calibrar as entradas.
-
-A base de comparação é sempre o código não
-ofuscado na mesma linguagem — um programa em Python é naturalmente mais lento que
-o equivalente em C, então não faz sentido comparar entre linguagens; o que
-interessa aqui é a diferença entre original e ofuscado dentro do próprio Python.
-
-Também vale testar entradas de tamanhos diferentes porque o custo da ofuscação não
-é necessariamente proporcional ao tamanho da entrada. Ele pode pesar mais numa
-carga grande do que numa pequena, e só dá para enxergar isso medindo em mais de um
-ponto.
-
 ## Ambiente de teste 1
 
 - Sistema: Ubuntu 24.04.2 LTS
